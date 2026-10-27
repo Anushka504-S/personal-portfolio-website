@@ -1,0 +1,228 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1120;
+    color: #ffffff;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Home section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.intro {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #cbd5e1;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0b1120;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+
+/* ===== DAY 3: PROFESSIONAL IMPROVEMENTS ===== */
+
+/* Better text selection color */
+::selection {
+    background-color: #38bdf8;
+    color: #0b1120;
+}
+
+/* Smooth button animations */
+.btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Navigation hover effect */
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+/* Better heading appearance */
+.hero h1 {
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+/* Make introduction easier to read */
+.description {
+    font-size: 17px;
+}
+
+/* Better focus for keyboard users */
+a:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+/* Responsive design for tablets and mobiles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 8vw, 48px);
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
